@@ -1,6 +1,6 @@
 # IDiscuss PHP Project
 
-This is a simple php project in which users can ask programming related questions and users can answer their questions.
+This is a simple php project in which users can ask programming related questions and users can answer others question.
 
 ## Similar websites are : -
 
