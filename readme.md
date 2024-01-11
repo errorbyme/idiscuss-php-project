@@ -33,4 +33,4 @@ stackoverflow.com, reddit.com
 
 ### Demo
 
-IDiscuss prjoect link - *https://idiscuss.free.nf/*
+IDiscuss project link - *https://idiscuss.free.nf/*
