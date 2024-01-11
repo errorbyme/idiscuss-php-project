@@ -1,0 +1,257 @@
+* {
+  scroll-behavior: smooth;
+}
+html,body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  height: 100vh;
+}
+#maincontainer {
+    background-color: #0d1117;
+    min-height: calc(100vh - 50px);
+    padding-bottom: 20px;
+}
+
+nav {
+  border-bottom: 1px solid rgb(52, 52, 52);
+  background-color: #010409;
+  position: relative;
+  transition: all 200ms;
+  min-height:70px ;
+}
+nav .navbar-brand span {
+  color: red !important;
+  font-size: 50px !important;
+}
+nav .navbar-brand span:hover {
+  color: rgb(96, 5, 5) !important;
+}
+nav .navbar-nav li a{
+  color: white !important;
+}
+nav .navbar-nav li a:hover {
+  color: red !important;
+}
+nav .navbar-nav .list-group .list-group-item {
+  border: none;
+  background-color: transparent;
+}
+nav input {
+  background-color: black !important;
+  border: 1px solid rgb(52, 52, 52) !important;
+  transition: all 1s !important;
+  color: red !important;
+}
+nav input:focus {
+  box-shadow: none !important;
+  border-color: red !important;
+}
+nav input:focus ~ button span {
+  color: red !important;
+}
+input,
+textarea{
+  background-color: #060a11 !important; 
+  border: 1px solid rgb(52, 52, 52) !important;
+  transition: all 1s !important;
+  color: white !important;
+}
+input:focus,
+textarea:focus {
+  box-shadow: none !important;
+  border-color: red !important;
+}
+::placeholder {
+  color: grey !important;
+}
+#list {
+  display: none;
+  position: absolute;
+  left: 2%;
+  top: 100%;
+  background: #ffffff;
+  z-index: 999 !important;
+  margin-left: -37px;
+  padding: 0 !important;
+  margin: 0 auto !important;
+  overflow-wrap: normal;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  min-height: 40px;
+  max-height: 350px;
+  max-width: 300px;
+  border: 1px solid grey;
+  background-color:#0d1117 !important;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+.toast {
+  background-color: #010409;
+  border: 1px solid grey;
+}
+.toast .close{
+  background-color: #010409;
+  color: red;
+}
+.wrapper {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  display: inline-flex;
+}
+.wrapper .static-txt {
+  font-weight: 400;
+  font-size: 17px;
+}
+.wrapper .static-txt {
+  color: white;
+}
+.wrapper .static-txt span {
+  font-size: 25px;
+  color: white;
+}
+.wrapper .dynamic-txt {
+  margin: 0;
+  padding: 0;
+  font-weight: bolder;
+  font-size: 20px;
+  color: red;
+  text-transform: capitalize;
+  line-height: 40px;
+  overflow: hidden;
+  height: 40px;
+  list-style: none;
+}
+.wrapper .dynamic-txt li span {
+  position: relative;
+}
+.wrapper .dynamic-txt li span::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  left: 100%;
+  background-color: #010409;
+  border-left: 3px solid red;
+  animation: typing 2s steps(10);
+}
+@keyframes typing {
+  0% {
+    left: 0%;
+  }
+  100% {
+    left: 100%;
+    margin: 0 -25px 0 25px;
+  }
+}
+
+.signmodal .modal-content {
+  background-color: #0d1117;
+}
+.signmodal .modal-content label{
+  background-color: transparent !important;
+}
+.signmodal .modal-content h1,
+.signmodal .modal-content label
+{
+  color: white !important;
+}
+.signmodal .modal-content .btn-sign{
+  color: green !important;
+  background-color: #060a11;
+}
+.signmodal .modal-content .close{
+  color: red !important;
+  background-color: #060a11;
+}
+
+#loader {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  z-index: 999;
+  transition: all 200ms;
+}
+#backtotop{
+  visibility: hidden;
+  opacity: 0;
+  transition: all 300ms;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  color: red;
+  background-color: #010409;
+  border: 2px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  margin-bottom: 4px;
+}
+.contact-page .box{
+  background-color: #060a11 !important;
+  border: 1px solid rgb(52, 52, 52) !important;
+}
+.threadlist-page .threadlist-welcome{
+    background-color:#060a11 !important;
+}
+.threadlist-page .threadlist-welcome h5{
+    color: white !important;
+    margin: 10px 0px;
+}
+.threadlist-page .threadlist-welcome hr{
+    color: grey !important;
+    margin: 0;
+    padding: 0;
+}
+.threadlist-page .threadlist-welcome .card-body,
+.threadlist-page .threadlist-welcome .card-footer{
+    color: grey !important;
+}
+
+.thread-page .thread-welcome{
+    background-color:#060a11 !important;
+}
+.thread-page .thread-welcome h5{
+    color: white !important;
+    margin: 10px 0px;
+}
+.thread-page .thread-welcome hr{
+    color: grey !important;
+    margin: 0;
+    padding: 0;
+}
+.thread-page .thread-welcome .card-body,
+.thread-page .thread-welcome .card-footer{
+    color: grey !important;
+}
+.about-page .about-design .logo{
+  font-size: 100px;
+  color:red;
+}
+.about-page .about-design p:nth-child(2){
+  color: green !important;
+  font-size: 1rem;
+  
+}
+.about-page .about-design p:last-child{
+  font-size: 1.5rem;
+  color: beige !important;
+}
+footer{
+  padding: 10px 0px;
+  background-color: #010409;
+  height: 50px;
+  z-index:999;
+}
