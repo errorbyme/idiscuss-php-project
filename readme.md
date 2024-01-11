@@ -21,7 +21,7 @@ stackoverflow.com, reddit.com
 #### Home page[After sign in]
 ![Home page Logged](imgs/idiscuss_screenshots/idiscuss-screenshot-after-signin.png)
 #### User-profile page
-![](imgs/idiscuss_screenshots/idiscuss-screenshot-user-profile.png)
+![User profile page](imgs/idiscuss_screenshots/idiscuss-screenshot-user-profile.png)
 #### About page
 ![About page](imgs/idiscuss_screenshots/idiscuss-screenshot-about.png)
 #### Contact page
