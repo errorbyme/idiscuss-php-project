@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 11, 2024 at 10:34 AM
+-- Generation Time: Jan 12, 2024 at 12:26 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -40,12 +40,13 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`c_id`, `c_name`, `c_desc`, `c_images`, `c_reg_date`) VALUES
-(1, 'python', 'Python is a high-level, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation. Python is dynamically typed and garbage-collect.', 'card-1.jpg', '2023-12-02 19:30:58'),
-(2, 'java', 'Java is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible. It is a general-purpose programming language.', 'card-2.jpg', '2023-12-02 19:32:09'),
-(3, 'javascript', 'JavaScript, often abbreviated as JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS.', 'card-3.jpg', '2023-12-02 19:32:39'),
-(5, 'C++', 'C++ is a high-level, general-purpose programming language created by Danish computer scientist Bjarne Stroustrup. First released in 1985 as an extension of the C programming language.', 'card-4.jpg', '2023-12-03 08:42:32'),
-(6, 'php', 'PHP is a general-purpose scripting language geared towards web development. It was originally created by Danish-Canadian programmer Rasmus Lerdorf in 1993 and released in 1995.', 'card-5.jpg', '2023-12-03 08:42:49'),
-(7, 'react js', 'React is a free and open-source front-end JavaScript library for building user interfaces based on components. It is maintained by Meta and a community of individual developers and companies.', 'card-6.jpg', '2023-12-03 08:43:21');
+(1, 'python', 'Python is a high-level, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation. Python is dynamically typed and garbage-collect.', 'card-1.jpg', '2024-01-12 14:22:34'),
+(2, 'java', 'Java is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible. It is a general-purpose programming language.', 'card-2.jpg', '2024-01-12 14:24:10'),
+(3, 'javascript', 'JavaScript, often abbreviated as JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS.', 'card-3.jpg', '2024-01-12 14:25:49'),
+(4, 'c++', 'C++ is a high-level, general-purpose programming language created by Danish computer scientist Bjarne Stroustrup. First released in 1985 as an extension of the C programming language.', 'card-4.jpg', '2024-01-12 14:26:19'),
+(5, 'php', 'PHP is a general-purpose scripting language geared towards web development. It was originally created by Danish-Canadian programmer Rasmus Lerdorf in 1993 and released in 1995.', 'card-5.jpg', '2024-01-12 14:27:23'),
+(6, 'react js', 'React is a free and open-source front-end JavaScript library for building user interfaces based on components. It is maintained by Meta and a community of individual developers and companies.', 'card-6.jpg', '2024-01-12 14:29:24'),
+(7, 'other programming related questions', 'Ask any type of programming related question.', 'card-7.jpg', '2024-01-12 14:37:57');
 
 -- --------------------------------------------------------
 
@@ -55,7 +56,7 @@ INSERT INTO `categories` (`c_id`, `c_name`, `c_desc`, `c_images`, `c_reg_date`) 
 
 CREATE TABLE `comments` (
   `comment_id` int(255) NOT NULL,
-  `comment_content` varchar(255) NOT NULL,
+  `comment_content` text NOT NULL,
   `thread_id` int(255) NOT NULL,
   `comment_by` int(255) NOT NULL,
   `comment_on_id` int(255) NOT NULL,
@@ -68,43 +69,36 @@ CREATE TABLE `comments` (
 --
 
 INSERT INTO `comments` (`comment_id`, `comment_content`, `thread_id`, `comment_by`, `comment_on_id`, `active`, `comment_date`) VALUES
-(1, 'do dis everything wil be solve\r\n', 1, 13, 1, 1, '2024-01-08 14:47:31'),
-(2, 'try reinstalling all the modules ', 1, 7, 1, 1, '2024-01-08 14:48:07'),
-(3, 'might not be compatible to yr system', 1, 10, 1, 1, '2024-01-08 14:49:07'),
-(4, 'hello', 16, 10, 8, 1, '2024-01-08 14:49:46'),
-(5, 'hello', 14, 10, 3, 1, '2024-01-08 14:49:58'),
-(6, 'helllll', 6, 3, 5, 1, '2024-01-08 14:50:19'),
-(7, 'waw', 5, 3, 1, 1, '2024-01-08 14:50:29'),
-(8, 'yo', 3, 3, 4, 1, '2024-01-08 14:50:41'),
-(9, 'do dis \r\n', 15, 3, 3, 0, '2024-01-08 14:50:57'),
-(10, 'do dis', 13, 11, 5, 1, '2024-01-08 14:51:25'),
-(11, 'try dis', 26, 11, 10, 1, '2024-01-08 14:51:36'),
-(12, 'haha', 14, 11, 3, 1, '2024-01-08 14:51:47'),
-(13, 'try android studio', 20, 8, 12, 1, '2024-01-08 14:52:20'),
-(14, 'haha', 1, 9, 1, 1, '2024-01-08 14:54:59'),
-(15, 'wooooo', 1, 13, 1, 1, '2024-01-08 14:55:25'),
-(16, 'ha', 1, 1, 1, 0, '2024-01-08 15:39:14'),
-(17, 'ho', 1, 51, 1, 1, '2024-01-08 15:40:27'),
-(18, 'lol', 1, 4, 1, 1, '2024-01-08 15:46:33'),
-(19, 'hellllllO', 1, 9, 1, 1, '2024-01-08 16:12:41'),
-(20, 'haha', 1, 13, 1, 1, '2024-01-08 21:40:46'),
-(21, 'waaaaaaa', 1, 13, 1, 1, '2024-01-08 21:42:43'),
-(22, 'waw', 1, 13, 1, 1, '2024-01-09 08:25:42'),
-(23, 'nahhhhhhhhhhhhhhhhh', 1, 13, 1, 1, '2024-01-09 08:26:45'),
-(24, 'Python is an easy to learn, powerful programming language. It has efficient high-level data structures and a simple but effective approach to object-oriented programming. Python’s elegant syntax and dynamic typing, together with its interpreted nature, ma', 1, 13, 1, 1, '2024-01-09 09:51:12'),
-(25, 'hey', 1, 8, 1, 1, '2024-01-09 21:31:55'),
-(26, 'hey', 1, 8, 1, 1, '2024-01-09 21:32:01'),
-(27, 'heheheh\r\n\r\n\r\n\r\n', 1, 13, 1, 1, '2024-01-10 18:09:15'),
-(28, 'tetsting\r\n', 44, 13, 13, 0, '2024-01-10 19:44:30'),
-(29, 'wowow\r\n', 1, 13, 1, 1, '2024-01-10 21:08:12'),
-(30, '', 1, 15, 1, 1, '2024-01-11 09:50:36'),
-(31, 'waw', 1, 13, 1, 1, '2024-01-11 11:00:06'),
-(32, 'lol thnks guyzz', 1, 1, 1, 0, '2024-01-11 14:19:36'),
-(33, 'waaw', 3, 1, 4, 1, '2024-01-11 14:20:05'),
-(34, 'waw\r\n', 1, 14, 1, 1, '2024-01-11 14:27:51'),
-(35, 'waw\r\n', 45, 14, 14, 0, '2024-01-11 14:28:32'),
-(36, 'lol', 14, 3, 3, 0, '2024-01-11 14:54:00'),
-(37, 'hellllllllllllllllllllllll', 1, 3, 1, 1, '2024-01-11 14:59:36');
+(1, 'setup.py is a python file, the presence of which is an indication that the module/package you are about to install has likely been packaged and distributed with Distutils, which is the standard for distributing Python Modules.', 1, 2, 1, 1, '2024-01-12 15:34:34'),
+(2, '$ pip install : - pip will use setup.py to install your module. Avoid calling setup.py directly.', 1, 7, 1, 1, '2024-01-12 15:36:33'),
+(3, 'Why are you using an RC release?', 2, 1, 3, 1, '2024-01-12 15:55:57'),
+(4, 'then which one to download I am new to python please help me to install?', 2, 3, 3, 0, '2024-01-12 15:56:30'),
+(5, 'This error manifests when installing Python as a Windows Store app, too.  Open \'Manage App Execution Aliases\' through Start and disable all the Python entries before installing. After installation successfully completes, enable the appropriate aliases for python.exe, python3.exe and possible other version-specific ones.', 2, 4, 3, 1, '2024-01-12 15:57:48'),
+(6, 'One of your files is corrupted. Simply download Jarfix and run it.\r\n\r\nThe Breakdown has an easy and helpful website to using Jarfix. Simply follow the instructions and download it in the link below:\r\n\r\nlink - https://thebreakdown.xyz/jarfix-to-repair-jar-files-on-your-pc/', 3, 1, 4, 1, '2024-01-12 16:00:56'),
+(7, 'This usually happens due to Package Cache Folder absent in your local data.\r\n\r\nCheck the python log (from your installation window; where you see the error), scroll down to the end. After Restore Point Creation point log, you would find that it is unable to transfer file from local temp cache to this location C:\\Users&lt;>\\AppData\\local\\Package Cache.\r\nTo isolate this, check if the path exists in your system or not? If not then please create the folder name Package Cache in local folder.\r\n\r\nOnce you do, you would notice that fodler is populated with some temporary downloads.\r\n\r\nReinstall the python package. This time it will install.\r\nI had the same issue in my organization where I was using VDI. The folder was not present there and thats why everytime it comes to that point, it was failing.\r\n\r\nI was able to fix the issue.', 2, 5, 3, 1, '2024-01-12 16:02:48'),
+(8, 'ty tho', 2, 3, 3, 0, '2024-01-12 16:06:01'),
+(9, 'This isn\'t very helpful. You are shoving vocabulary and instructions that probably don\'t make sense to him. You are tell him to see his output however he most likely don\'t know what to do from there. Google more errors? No. The solution is to run jarfix.', 3, 3, 4, 1, '2024-01-12 16:07:47'),
+(10, 'Would you please reword your question? What do you mean by \"formatted way\"? As in, with rich formatting, like bold/italic/etc? ', 4, 12, 10, 1, '2024-01-12 16:12:54'),
+(11, 'is there a way to display the runtime value of a variable by printing the value of the variable using some console commands? ', 4, 10, 10, 0, '2024-01-12 16:14:17'),
+(12, 'Just do console.log(\"\", yourObject1, yourObject2, yourObject3, etc...);. A shorter version is to just do console.log(yourObject1, yourObject2, etc...);', 4, 9, 10, 1, '2024-01-12 16:14:57'),
+(13, 'missing or old java version on your machine? java -version?', 6, 10, 15, 1, '2024-01-12 16:20:43'),
+(14, 'Java(TM) SE Runtime Environment (build 1.8.0_101-b13) Checking from browser: Your system is managed by your organization IT department. The following Java versions were detected on your system. Java 8 Update 101 (static) Java 8 Update 101 (64-bit)', 6, 15, 15, 0, '2024-01-12 16:21:04'),
+(15, 'Can you check for any error information in the logs, they should be here &lt;DRIVE>\\Users\\&lt;username>\\.Pycharm&lt;version>', 6, 8, 15, 1, '2024-01-12 16:22:10'),
+(16, 'I have tried pycharm.exe and it will never run and never display any message. Just found pycharm64.exe under the same folder and it works.', 6, 15, 15, 0, '2024-01-12 16:23:46'),
+(17, 'I did a bit a digging. The shortcut my system is using points directly to that pycharm64.exe, and yet the shortcut doesn\'t work and opening the *.exe as you said does. I don\'t know windows well enough to debug that.', 6, 15, 15, 0, '2024-01-12 16:24:45'),
+(18, 'Check if you have Java installed on your windows 10.', 6, 10, 15, 1, '2024-01-12 16:25:45'),
+(19, 'its workin ty..', 4, 10, 10, 0, '2024-01-12 16:27:55'),
+(20, 'I faced a similar problem many times, the launcher window will open and then immediately close without any error message. In my case it seems that this happens when I have insufficient disk space. Clearing 10-15Gb solves it for me. Hope that helps.', 6, 5, 15, 1, '2024-01-12 16:33:00'),
+(21, '\r\nYes! There\'s a Python debugger called pdb just for doing that!\r\n\r\nYou can launch a Python program through pdb via python -m pdb myscript.py.\r\n\r\nThere are a few commands you can then issue, which are documented on the pdb page.\r\n\r\nSome useful ones to remember are:\r\n\r\nb: set a breakpoint\r\nc: continue debugging until you hit a breakpoint\r\ns: step through the code\r\nn: to go to next line of code\r\nl: list source code for the current file (default: 11 lines including the line being executed)\r\nu: navigate up a stack frame\r\nd: navigate down a stack frame\r\np: to print the value of an expression in the current context\r\nIf you don\'t want to use a command line debugger, some IDEs like Pydev, Wing IDE or PyCharm have a GUI debugger. Wing and PyCharm are commercial products, but Wing has a free \"Personal\" edition, and PyCharm has a free community edition.', 7, 13, 6, 1, '2024-01-12 16:37:15'),
+(22, 'Wow, I cannot believe I\'m having a hard time finding a graphical pdb for linux/ubuntu. Am I missing something? I might have to look into making a SublimeText Plugin for it. ', 7, 6, 6, 0, '2024-01-12 16:38:06'),
+(23, 'PyCharm is pretty good as a graphical debugger, and its Community Edition is free!', 7, 11, 6, 1, '2024-01-12 16:38:52'),
+(24, '@dhruv, pudb is great for that. Also', 7, 5, 6, 1, '2024-01-12 16:40:36'),
+(25, 'pdb is not a command line tool. To use it, use python -m pdb your_script.py. ', 7, 14, 6, 1, '2024-01-12 16:41:35'),
+(26, '@devil I guess it\'s not standard, but on Ubuntu the pdb command is part of the python package. In any case, python -m &lt;module> is becoming the standard for other things too like pip, so it\'s probably best to use that by default. ', 7, 17, 6, 1, '2024-01-12 16:42:35'),
+(27, 'By using Python Interactive Debugger \'pdb\'\r\nFirst step is to make the Python interpreter enter into the debugging mode.\r\n\r\nA. From the Command Line : Most straight forward way, running from command line, of python interpreter. \r\n\r\nMost straight forward way, running from command line, of python interpreter [ $ python -m pdb scriptName.py\r\n> .../pdb_script.py(7)&lt;module>()\r\n-> \"\"\"\r\n(Pdb) ] \r\nB. Within the Interpreter : \r\n\r\nWhile developing early versions of modules and to experiment it more iteratively. [  $ python\r\nPython 2.7 (r27:82508, Jul  3 2010, 21:12:11)\r\n[GCC 4.0.1 (Apple Inc. build 5493)] on darwin\r\nType \"help\", \"copyright\", \"credits\" or \"license\" for more information.\r\n>>> import pdb_script\r\n>>> import pdb\r\n>>> pdb.run(\'pdb_script.MyObj(5).go()\')\r\n> &lt;string>(1)&lt;module>()\r\n(Pdb) ]\r\n\r\n', 7, 12, 6, 1, '2024-01-12 16:47:19'),
+(28, '\"Turning off the (Pdb) prompt… with “c” (continue)\" -- That doesn\'t sound right... The docs say c is \"Continue execution, only stop when a breakpoint is encountered.', 7, 9, 6, 1, '2024-01-12 16:48:38'),
+(29, 'here is a module called \'pdb\' in python. At the top of your python script you do\r\n [ \r\nimport pdb\r\npdb.set_trace() ]\r\nand you will enter into debugging mode. You can use \'s\' to step, \'n\' to follow next line similar to what you would do with \'gdb\' debugger.', 7, 7, 6, 1, '2024-01-12 16:50:21'),
+(30, 'When I saw breakpoint I was excited. But then I learnt that it is essentially just a shortcut for import pdb; pdb.set_trace() and that made me sad. Python devs: please focus on improving PDB with basic GDB features like context lines, persistent command history and tab auto-completion :-)', 7, 1, 6, 1, '2024-01-12 16:53:32');
 
 -- --------------------------------------------------------
 
@@ -122,14 +116,6 @@ CREATE TABLE `messages` (
   `message_time` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data for table `messages`
---
-
-INSERT INTO `messages` (`id`, `user_id`, `username`, `email`, `contact`, `message`, `message_time`) VALUES
-(1, 13, 'shna', 'shna@gmail.com', 0, 'hh', '2024-01-10 21:38:40'),
-(2, 3, 'woh', 'woh@gmail.com', 0, 'sjsjk', '2024-01-11 15:00:07');
-
 -- --------------------------------------------------------
 
 --
@@ -138,7 +124,7 @@ INSERT INTO `messages` (`id`, `user_id`, `username`, `email`, `contact`, `messag
 
 CREATE TABLE `threads` (
   `threads_id` int(255) NOT NULL,
-  `threads_title` varchar(255) NOT NULL,
+  `threads_title` varchar(100) NOT NULL,
   `threads_desc` text NOT NULL,
   `threads_cat_id` int(255) NOT NULL,
   `threads_user_id` int(255) NOT NULL,
@@ -150,45 +136,13 @@ CREATE TABLE `threads` (
 --
 
 INSERT INTO `threads` (`threads_id`, `threads_title`, `threads_desc`, `threads_cat_id`, `threads_user_id`, `threads_reg_date`) VALUES
-(1, 'pycharm installation problem', 'pycharm installation problem its shows pycharm isn\'t compatible ', 1, 1, '2023-12-03 20:50:42'),
-(2, 'php frameworks', 'can any one tell whats best php framework to learn in 2003', 6, 1, '2023-12-03 20:52:23'),
-(3, 'python vs code issue', 'my python isnt running in vs code for an unknwon reason ..', 1, 4, '2023-12-03 20:56:15'),
-(4, 'javascript frameworks', 'can anyone tell me js best frameworks', 3, 4, '2023-12-03 21:00:09'),
-(5, 'c++', 'best books to read for c++', 5, 1, '2023-12-04 09:12:42'),
-(6, 'java', 'is java a multiple inheritance lang', 2, 5, '2023-12-04 09:18:08'),
-(8, 'hey', '&lt;script&gt;alert(\"hey\");&lt;/script&gt;', 1, 4, '2023-12-04 13:47:33'),
-(11, 'c++', 'not working', 5, 7, '2023-12-05 16:51:20'),
-(12, 'php', 'php showing headers cant be modify..', 6, 1, '2023-12-05 16:51:53'),
-(13, 'python', 'in terminnator python error - serever crash is showing', 1, 5, '2023-12-05 17:30:06'),
-(14, 'qn test 1', 'test1', 3, 3, '2023-12-07 12:24:28'),
-(15, 'hey', 'hey@', 1, 3, '2023-12-09 17:16:38'),
-(16, 'hey', 'just testing it guyzz', 2, 8, '2023-12-10 12:01:59'),
-(18, 'py', 'how long can it take to learn python lang?', 1, 10, '2023-12-10 14:12:41'),
-(19, 'pyth', 'can i learn python in just 3 months?', 1, 13, '2023-12-10 14:18:17'),
-(20, 'python error', 'why my python terminal aint takin any input?\r\n', 1, 12, '2023-12-10 14:24:59'),
-(21, 'IDE for python', 'best IDE for python ,dat can help beginner like me', 1, 14, '2023-12-10 14:34:03'),
-(22, 'python runtime error', 'terminal showing run time error again n again without showing wats the actual error any one got any idea\r\n', 1, 15, '2023-12-11 11:48:52'),
-(23, 'python ', 'can anyone recommend how to install python step by step..', 1, 9, '2023-12-11 11:57:15'),
-(24, 'python runtime issue', 'theres a runtime problem occuring while debugging\r\n', 1, 13, '2023-12-14 09:18:16'),
-(25, 'Qn testing', 'testing', 2, 48, '2023-12-14 09:23:09'),
-(26, 'testing 2', 'heyyyyy', 2, 10, '2023-12-14 09:23:51'),
-(27, 'testing 3', 'testing', 2, 15, '2023-12-14 09:25:10'),
-(28, 'testing 4', 'holaa', 2, 10, '2023-12-14 09:27:23'),
-(29, 'vs code ', 'vs shortcut to run any python code ?\r\n', 1, 10, '2023-12-14 15:23:49'),
-(30, 'testing', 'testing', 1, 15, '2023-12-22 08:09:15'),
-(31, 'nimi', 'testing', 1, 10, '2023-12-22 08:09:58'),
-(34, '', '', 1, 13, '2024-01-04 23:07:12'),
-(35, '', '', 1, 13, '2024-01-07 09:48:57'),
-(36, 'hey', 'hello', 2, 13, '2024-01-07 12:04:24'),
-(37, 'hey', 'hey', 1, 7, '2024-01-07 12:24:38'),
-(38, 'hey', '', 1, 13, '2024-01-07 18:15:29'),
-(39, 'hey', 'hey', 1, 74, '2024-01-07 20:30:30'),
-(40, 'he', '', 2, 74, '2024-01-07 21:03:13'),
-(41, 'hey', 'hello', 1, 8, '2024-01-09 21:32:42'),
-(42, 'hey', 'helllllllllllllllo', 1, 8, '2024-01-09 21:32:51'),
-(43, 'hey', 'hel', 1, 13, '2024-01-10 18:08:38'),
-(44, 'testing', 'tttt', 1, 13, '2024-01-10 19:44:19'),
-(45, 'Question testing', 'tttt', 1, 14, '2024-01-11 14:28:19');
+(1, 'What is setup.py?', 'What is setup.py and how can it be configured or used?', 1, 1, '2024-01-12 15:16:09'),
+(2, 'Python setup failed error 0x80070005 access denied', 'When installing python on my system I am getting this - error set up failed...\r\nPlease help how can I fix this issue?\r\n\r\nMy account has admin rights on windows 10 pro 64 bit operating system. I have downloaded python setup from below link:', 1, 3, '2024-01-12 15:54:44'),
+(3, 'Java Installation Not Completed / Unable to install Java', 'I downloaded a file for a game that requires Java to run. When I downloaded the file it saved as a WinRAR file. So I right clicked the file and pressed open with Java Platform SE Binary (As that was the only Java add-on that came up). Then an Error Message came up which says: \"Java Installation Not Completed.\r\nUnable to install Java.\r\nThere are errors in the following switches:\r\n(\"C:\\Users\\MyName\\Desktop\\The file name for The Game(2).jar\").\r\nCheck that the commands are valid and try again.\"\r\nBut I have already Installed Java as well.\r\n\r\nHas anyone got a fix they could recommend?', 2, 4, '2024-01-12 15:59:49'),
+(4, 'How can I display a JavaScript object?', 'How do I display the content of a JavaScript object in a string format like when we alert a variable?\r\n\r\nThe same formatted way I want to display an object.', 3, 10, '2024-01-12 16:11:04'),
+(5, 'Python- While Loop with error handling', 'Ive been reading up on while Loops while learning python. The following works without error, however if I insert 16 as value, I get only 16', 1, 16, '2024-01-12 16:18:06'),
+(6, 'PyCharm is not Launching on Windows! What\'s wrong with it?', 'I downloaded and installed JetBrains PyCharm (Community version) on my Windows 10, but nothing happens when I try to run it. I tried everything like rebooting Windows, Run as administrator, etc. Nothing is found in Task Manager either.', 1, 15, '2024-01-12 16:19:37'),
+(7, 'How to step through Python code to help debug issues?', 'n Java/C# you can easily step through code to trace what might be going wrong, and IDE\'s make this process very user friendly.\r\n\r\nCan you trace through python code in a similar fashion?', 1, 6, '2024-01-12 16:35:06');
 
 -- --------------------------------------------------------
 
@@ -210,49 +164,23 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `user_email`, `password`, `user_image`, `timestamp`) VALUES
-(1, 'hy', 'hy@gmail.com', '$2y$10$LB6Gjlqg8ViCxwUqQYjUc.AoMANFVJ9102RJQXouaXUtjzOIorjV.', 'haikyu_wallpaper.jpg', '2023-12-10 13:58:07'),
-(2, 'me', 'me@gmail.com', '$2y$10$45Gd6x/C77bg2n9Qbfumq.6Bt7mCeBFRokFUAWKw6glrpGBlxTHZK', 'haikyu_wallpaper.jpg', '2023-12-10 13:59:16'),
-(3, 'woh', 'woh@gmail.com', '$2y$10$VCx6h6y8MKK.vznz1bxMz.VBEjc7iF35uyMKRI0qVarFSAUP1.KqO', 'volleyball_spiking.jpeg', '2023-12-10 13:59:38'),
-(4, 'nefes', 'nefes@gmail.com', '$2y$10$m6ItVD9atJbwjMCuPPznQesLTbxPgHVZ36t4Ob.4nUWVb54nTEaJa', 'apsara-pencils-587078_720x.jpg', '2023-12-10 14:00:25'),
-(5, 'Herman', 'Herman@gmail.com', '$2y$10$DHuy0NsdIabYRIuX8Ubk9O5pJ2KuVtSWE.vvtDKTn0ReovdQcAcQa', '2nd-profile.jpg', '2023-12-10 14:01:42'),
-(6, 'Tom', 'Tom@gmail.com', '$2y$10$qo6qA0lJAh27PAczrCpdYuh4JR2gjYi9oQGjRBGEABw/pE1ujz3yG', '3rd-profile.jpg', '2023-12-10 14:02:07'),
-(7, 'aman', 'aman@gmail.com', '$2y$10$29GdINYtXb.3BSyM8zH7I.5mplReU2uAY5UIOn0XU2wSU.CpbvoQu', '1st-profile.jpg', '2023-12-10 14:02:35'),
-(8, 'ensh', 'ensh@gmail.com', '$2y$10$QQdiV.rVmX8ODeTamwaX/ONAQEpDEORVJP.UDAur5KfRu5ItCues2', 'doms neon r-t pencil (set of 10-multicolor-90$).jpg', '2023-12-10 14:03:09'),
-(9, 'vipin', 'vipin@gmail.com', '$2y$10$GnltM4QL4RZRGbTFgvZ6xullkSt3jIgcibuI2K9mntuQ3LVTXS/3C', 'apsara-pencils-587078_720x.jpg', '2023-12-10 14:03:43'),
-(10, 'simmy', 'simmy@gmail.com', '$2y$10$e0Tx8jLA85kHdhkp74Elc.x2z//6Wwi6i3LopXZRATqmdogMDpRN.', 'doms neon r-t pencil (set of 10-multicolor-90$).jpg', '2023-12-10 14:04:41'),
-(11, 'Nilesh', 'nilesh@gmail.com', '$2y$10$40OwKPmApua/4ux/rj7V..LRebfqdfay0RadBWKRD/u3NpS9PoFXK', 'sky-roller-pen-black-inkgel-penskacoscoobookaco-sky-black-704974_720x.jpg', '2023-12-10 14:14:36'),
-(12, 'angel', 'angel@gmail.com', '$2y$10$cbOJOowWNKBB87tzax0aUe8D5JGgT20CI9XlqWDZwP.i.cYTPT122', 'Aerotix-Report-File-With-Pocket-A4-pack of 5-150$.jpg', '2023-12-10 14:15:34'),
-(13, 'shna', 'shna@gmail.com', '$2y$10$RxhEZdX5Ot1dtOw3RHv9ouTm4L3XqC8G26hAot/EIjh9hl4FFR1EO', 'doms wildlife animals exercise book 300 pages- 225$.jpg', '2023-12-10 14:16:59'),
-(14, 'devil', 'devil@gmail.com', '$2y$10$b98ca/lJn9.8oaq2R4LLdeb27v9ZO6MYdibv6FE8lJoALuHP/dbdG', 'classmate asteroid geometry box -250$.jpg', '2023-12-10 14:32:50'),
-(15, 'Ritiksha', 'Ritiksha@gmail.com', '$2y$10$0vgzRBzFCMi9zzCO.ZEAvuewuz976xrS0nDyIdhR9THxfD0gTkzh2', 'Basic file folder-letter size (fits A4 paper)-black-with 13 pockets.jpg', '2023-12-11 11:47:05'),
-(48, 'sunil', 'sunil@gmail.com', '$2y$10$p9bFW9eaFpTH/OtRuSqSQeax5u29F/XidHj6p4q2YRT4PhrtG9Nxa', 'classmate geometry box-245.jpg', '2023-12-12 10:48:01'),
-(51, 'ronny', 'ronyy@gmail.com', '$2y$10$rCdIbGz1JuBPkR1CTqo4oeDeG0lG42PqbiuAatUjf6yf.jsLQEPf.', '2nd-profile.jpg', '2023-12-20 13:54:50'),
-(53, 'yashasvi', 'yash@gmail.com', '$2y$10$69x0h4VNBRdw2rv69CqX2efMuPxlsncCcU0fxdppFdZ5w2rJYCpxu', 'sky-roller-pen-black-inkgel-penskacoscoobookaco-sky-black-704974_720x.jpg', '2023-12-23 21:06:55'),
-(54, '', '', '$2y$10$O/5erkMj8BGOIF/YZIdZruaebk1AC6gGzqxV4imdXgYcI5cPFyBKW', '', '2024-01-03 18:06:46'),
-(55, 'hey', 'hey@gmail.com', '$2y$10$rAowi3OvwirNQEzKpzKZTOaOCQPSECjpi9md7yqtOhncOW7fvHtKu', '', '2024-01-03 20:02:02'),
-(56, 'hey', 'wawaw@gmail.com', '$2y$10$N6uIDB5ZrJwiFXe7JPZEtufXHYIPoizc02ctCHjjl9/Z/5vcRF60G', '', '2024-01-04 09:19:20'),
-(57, 'dummy', 'dummy@gmail.com', '$2y$10$yNGxsy50dav.VIPfqBhyNu2k1WKrYBPakaWBib6brL9BbKw2CBPq6', '2nd-profile.jpg', '2024-01-05 13:48:45'),
-(58, 'hey', 'heyy@gmail.com', '$2y$10$7h9pSkWfxYkKs2Uv0xyR.O3eJyZv5CQ.5mD5sL4UL/sASk6s9dMBS', '', '2024-01-07 10:34:50'),
-(59, 'helo', 'heelo@gmail.com', '$2y$10$.PxMEH4K5dTddrElmL0JQuI3IV.eVQ4wfkm/TcBbJSP9hsB3m43S.', '', '2024-01-07 10:37:45'),
-(60, 'hell', 'hell@gmail.com', '$2y$10$rIgNCieD7kPvja2VCtRaAOqbrK2JyXQnaT9HaS0OTZDjzUtt9zOhm', '', '2024-01-07 10:39:58'),
-(61, 'wo', 'wohh@gmail.com', '$2y$10$hso1/WUP3zw9ZOEfJ/dI6.rauVqpXA0GyGMP/52K.zzJgFwTTyqYC', '', '2024-01-07 10:41:38'),
-(62, 'hey', 'heyyyyyy@gmail.com', '$2y$10$dBJ4Mcuw4P/HGpihTwhdXO79SYsziZ8.96DaKN2sSWeeizk8aSHWe', '', '2024-01-07 10:42:28'),
-(63, 'hey', 'heyyy@gmail.com', '$2y$10$j2nqOqF58EJhB7XBppujt.cr6RQ/RZwJQv02bMNjUyWoW/gyFG3SO', '', '2024-01-07 10:44:30'),
-(64, 'woh', 'wohhhh@gmail.com', '$2y$10$7L7u6bGOTwcKy3.6XhXuUutjp.lx8VR52WHzGzgk2mEfngomj8cBO', '', '2024-01-07 10:45:17'),
-(65, 'hel', 'hellooo@gmail.com', '$2y$10$w5a0DcnBxRSlatUPoO4Js.y4B0l6sMgtlg7TtvV4z5qru2c.CuVie', '', '2024-01-07 10:46:09'),
-(66, 'hey', 'heyyyyyyyyyyy@gmail.com', '$2y$10$u4s8pl.WFv6JxaapYDfGjOq8.zHD9B5UDNS6mQkI7qRIK0D3jO5u2', '', '2024-01-07 10:49:19'),
-(67, 'hey', 'heyyyy@gmail.com', '$2y$10$bmaVt7nm36gmspgRYipi2uGluDvPCVd.m/QcRRmKUqkqwAfsEfHFa', '', '2024-01-07 10:51:57'),
-(68, 'shna', 'shnaa@gmail.com', '$2y$10$IZUAcWewnLrA.poSOQQnU.xrmB/g/3gopZvhoQ7qy3B.yByGx/tc.', '', '2024-01-07 10:53:25'),
-(69, 'hey', 'helloooooo@gmail.com', '$2y$10$Rq8SKYXDys5nROpq5uIeCuNqLf4tNkjfR30OnEUDY7u3l24uXqASu', '', '2024-01-07 11:00:35'),
-(70, 'hellll', 'helllll@gmail.com', '$2y$10$DRAovhMYCVK/kMUi8f/wEuuU4ejo7T/7UaHi/07sqx7pez7eY.HSC', '', '2024-01-07 11:02:31'),
-(71, 'dhruv', 'dhruv@gmail.com', '$2y$10$arem6dYaPrprryyN5EaNXuu8QvkOgMB71aHpu1FsrJMFT.NSm6drO', '', '2024-01-07 11:05:11'),
-(72, 'h', 'wooooooooooooooooooo@gmail.com', '$2y$10$7tc9QuzluAYswg0Fuot13epudUUljnQjXJtlKSpPqpeQbDEK8ff1C', '', '2024-01-07 11:20:22'),
-(73, 'helll', 'helllllllll@gmail.com', '$2y$10$k7s1e0YyIkYc4X8bfnrqxeMmafmwXhfqEpSI9.p1p8Ia52ZLkWhmu', '', '2024-01-07 18:22:15'),
-(74, 'kelly', 'kelly@gmail.com', '$2y$10$bnrLTEbpLD6TH0C5rdti5Ou4WVvh19jly4ds8P7ytODr2BZWsWXai', '', '2024-01-07 20:29:37'),
-(75, 'hey', 'hui@gmail.com', '$2y$10$Sewd7jTLJJ1U/k/PlDotsejdhV/CLkn2s65q7eTt2DYa09X1.Z7wC', '', '2024-01-08 08:09:37'),
-(76, 'shna', 'shana@gmail.com', '$2y$10$v7sZjR0QpMZkR/AGfM0SP.EgQW9db94dmlD3U2Il3fXuc9ShcQf0G', '', '2024-01-10 09:13:54'),
-(77, '1', 'he@g.com', '$2y$10$VkGnEL9ZOykTx9xvI1lge.2Vs6juy1MENHl8NlD7DZGo9BukRhbXe', '', '2024-01-10 21:30:05'),
-(78, 'hey', 'helll@g.com', '$2y$10$9MLm5MF9ixUIqXuxMXNMlui88G5hCHuNIIJEHGlClUd00aqNQSF0i', '', '2024-01-10 21:31:09');
+(1, 'hey', 'hey@gmail.com', '$2y$10$.0V9lIcXm1Ac24s12Ws38ejOt20txWFR4BZm7M5mJrVphTRGrm6D2', 'profile-3.jpg', '2024-01-12 10:09:57'),
+(2, 'vipin', 'vipin@gmail.com', '$2y$10$CAFA4Dd4DHVzPDwo4P1Lb.4iDqpSbWkUxctmQuSyLvL5fmw5zu2ZC', 'profile-5.jpg', '2024-01-12 10:15:15'),
+(3, 'ensh', 'ensh@gmail.com', '$2y$10$2t4VBYIeehv6VD0T38rEneLqJwcu7.v//1gKGcpDNOxPMy/lJeQ66', 'profile-4.jpg', '2024-01-12 10:15:54'),
+(4, 'abhishek', 'abhi@gmail.com', '$2y$10$E.8BmDCKYbAGRwuxBu8OduQ.SGYb8hKnZWFsTuvLydvZuyEdP4Lfq', 'profile-6.jpg', '2024-01-12 10:16:43'),
+(5, 'shna', 'shna@gmail.com', '$2y$10$SyuloJ2PKjsSW3GtUWjEauxkV3OuaE6EvJM4Dbr6wF83YxeneDsaO', 'profile-7.jpg', '2024-01-12 10:17:38'),
+(6, 'dhruv', 'scout@gmail.com', '$2y$10$MPCL1fwqugxOJwzNSlDDneKwJLQkfbiqheKeZNJAoT9cCaMq8MVkO', 'profile-6.jpg', '2024-01-12 10:18:46'),
+(7, 'nefes', 'nefes@gmail.com', '$2y$10$8OylZ2q9nDL1AiPyVR8r5eKhCafX6yk0Qq/2HR/Q8LU1pfRzWmhgO', 'profile-7.jpg', '2024-01-12 10:19:36'),
+(8, 'nilesh', 'nilesh@gmail.com', '$2y$10$lpMqxNL/wFeZQR4aWTX66u84ek2aZpXgtb6PhXloFHODbZN1xQTt6', 'profile-6.jpg', '2024-01-12 10:22:30'),
+(9, 'angel', 'angel@gmail.com', '$2y$10$Ipjj2Fwb3fn1Wj/6Uv94kugnSbyyANTwqpfR1fVbYcCbylBpbcJY.', 'profile-14.jpg', '2024-01-12 10:23:25'),
+(10, 'simmy', 'simmy@gmail.com', '$2y$10$NMO.VEyit/PNZK5h/1R8mezi6j/Ue0LY.Vl9KLGu9pbKOyYl34ppm', 'profile-3.jpg', '2024-01-12 10:23:54'),
+(11, 'ritiksha', 'ritiksha@gmail.com', '$2y$10$e3aRE.UOZvBUdDYvZlyZLeJJmJo3iN8gbW8BAWxs2vbUa9ycmdQDq', 'profile-14.jpg', '2024-01-12 10:33:59'),
+(12, 'aman', 'aman@gmail.com', '$2y$10$e0EZa9hrK9blBdnoBuZmwOyxw1GrQ4fY7SQRJQI5XYPL9UWm.tJLq', 'profile-8.jpg', '2024-01-12 10:34:41'),
+(13, 'hy', 'hy@gmail.com', '$2y$10$U5/KG5VVy3Xh/fCJvEJCMemTU4IwU6dxRZwzoZOFZsFuYL3Tn48iG', 'profile-10.jpg', '2024-01-12 10:35:26'),
+(14, 'devil', 'devil@gmail.com', '$2y$10$hmYk5J3MLX9L.8w8xcZRkud8gBwEvj.YvIx/.lFFLfAM2nwUWU3hi', 'profile-11.jpg', '2024-01-12 10:36:38'),
+(15, 'chirag', 'chirag@gmail.com', '$2y$10$UtxEmgXUVR2Mmb/W0PeVNO8awvxYclWT7ZU6Clbb83xwslPSAFYYO', 'profile-2.jpg', '2024-01-12 10:38:01'),
+(16, 'ankit', 'ankit@gmail.com', '$2y$10$id.lBP7zfxy2JtiHN7jpuut/aWLPZpE0Nhnz5DsDmH3Gka.HghPAO', 'profile-12.jpg', '2024-01-12 10:38:36'),
+(17, 'nirmal', 'nirmal@gmail.com', '$2y$10$EX5PexRQdyu64hf6XsAHFeGSz6vJ1exQEhUFf8owh5NrhaSVs.7ES', 'profile-15.jpg', '2024-01-12 10:39:37');
 
 --
 -- Indexes for dumped tables
@@ -303,25 +231,25 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT for table `comments`
 --
 ALTER TABLE `comments`
-  MODIFY `comment_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `comment_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT for table `messages`
 --
 ALTER TABLE `messages`
-  MODIFY `id` int(40) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(40) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `threads`
 --
 ALTER TABLE `threads`
-  MODIFY `threads_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+  MODIFY `threads_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
